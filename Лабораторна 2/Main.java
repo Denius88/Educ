@@ -1,7 +1,13 @@
-
+/**
+ * Основний клас для роботи з масивом книг та виводу даних за критеріями.
+ */
 public class Main {
 
-    // a) список книг заданого автора
+    /**
+     * Виводить книги заданого автора.
+     * @param books масив книг
+     * @param author ім'я автора
+     */
     public static void printBooksByAuthor(Book[] books, String author) {
         System.out.println("Книги автора: " + author);
         for (Book b : books) {
@@ -11,7 +17,11 @@ public class Main {
         }
     }
 
-    // b) список книг заданого видавництва
+    /**
+     * Виводить книги заданого видавництва.
+     * @param books масив книг
+     * @param publisher назва видавництва
+     */
     public static void printBooksByPublisher(Book[] books, String publisher) {
         System.out.println("Книги видавництва: " + publisher);
         for (Book b : books) {
@@ -21,7 +31,11 @@ public class Main {
         }
     }
 
-    // c) список книг після заданого року
+    /**
+     * Виводить книги, видані після заданого року.
+     * @param books масив книг
+     * @param year рік
+     */
     public static void printBooksAfterYear(Book[] books, int year) {
         System.out.println("Книги після року: " + year);
         for (Book b : books) {
@@ -31,8 +45,11 @@ public class Main {
         }
     }
 
+    /**
+     * Основний метод програми.
+     * @param args аргументи командного рядка
+     */
     public static void main(String[] args) {
-        // створюємо масив об'єктів
         Book[] books = {
                 new Book(1, "Місто", "Валер'ян Підмогильний", "Книгоспілка", 1928, 350, 250.50),
                 new Book(2, "Кобзар", "Тарас Шевченко", "Веселка", 1840, 500, 300.00),
@@ -41,7 +58,6 @@ public class Main {
                 new Book(5, "Маруся Чурай", "Ліна Костенко", "Дніпро", 1979, 300, 220.40),
         };
 
-        // Виклики методів
         printBooksByAuthor(books, "Ліна Костенко");
         System.out.println();
 
