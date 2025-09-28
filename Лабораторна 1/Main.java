@@ -12,16 +12,17 @@ public class Main {
      * @param args Аргументи командного рядка (не використовуються)
      */
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Введіть число: ");
-        int n = scanner.nextInt();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Введіть число: ");
+            int n = scanner.nextInt();
 
-        Fibonacci fib = new Fibonacci();
+            Fibonacci fib = new Fibonacci();
 
-        System.out.print("Числа Фібоначі: ");
-        fib.printFibonacci(n);
+            System.out.print("Числа Фібоначі: ");
+            fib.printFibonacci(n);
 
-        System.out.print("\nТрикутні числа: ");
-        fib.printTriangleFibonacci(n);
+            System.out.print("\nТрикутні числа: ");
+            fib.printTriangleFibonacci(n);
+        }
     }
 }
